@@ -1,4 +1,10 @@
 # STASH
 
 ## Fast Hierarchical Aggregation Queries for Effective Visual Spatiotemporal Explorations
+The proliferation of sensors and observational instruments enable scientists to explore natural, spatiotemporal phenomena via explorative analysis and advanced modeling. Geospatial visualization, in particular, is an intuitive tool to identify patterns, enhance understanding of the data, and plan for subsequent analysis. However, seamless interactions between enduser devices and the sheer volume of data have been a challenge due to the limited bandwidth and data access latencies.
+
+STASH is a distributed, in-memory cache for hierarchical aggregation and query evaluations. STASH is a middleware which can be loaded on top of a distributed file ystem. Users perform queries from a lightweight visualization nterface at the front-end and the evaluations occur over the ack-end storage system housing the raw data over which summarization nd subsequent visualizations are to be performed. STASH facilitates fast exploratory analytics by caching relevant past query results based on their frequency and freshness to assist similar, future queries and avoid expensive disk I/O and network usage, thus reducing their latency. Additionally, STASH handles any hotspot that might result from a spike in user requests due to the spatial and temporal locality of their access patterns.
+
+Our empirical benchmarks showed that a STASH-enabled system reduces query latency of a basic system by over 5-folds and brings it down to interactive speed even for large country-sized spatiotemporal queries. We have contrasted STASH with existing cache-enabled analytics engines, such as ElasticSearch, and found that our STASH-enabled system reduced the aggregation query latency up to ~70%. STASH also alleviated skewed workloads through its dynamic replication scheme and improved throughput by ~40% in hotspot scenarios
+.
 ### Recipient of Best Paper Award at [IEEE Big Data, 2019](https://ieeexplore.ieee.org/abstract/document/8891029)
